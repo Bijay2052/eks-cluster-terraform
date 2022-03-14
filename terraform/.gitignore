@@ -1,5 +1,6 @@
 # Common
 .terraform
+.terraform.lock*
 *.tfstate*
 *.tfvars*
 .terraformrc
