@@ -1,0 +1,39 @@
+region = #eg "us-east-1"
+
+cluster-name = "test"
+
+cidr_block = "10.0.0.0/16" #VPC CIDR block
+
+namespace = "" # which could be your organization name, e.g. 'eg' or 'cp'"
+
+stage = "" #eg: dev, uat
+
+name = "" #Solution name, e.g. 'app' or 'cluster'"
+
+availability_zones = # eg: ["us-west-2a", "us-west-2b"]
+
+instance_type = "t3.medium" #instance type for worker node and bastion hosts eg: t3.medium
+
+health_check_type = "EC2" #Controls how health checking is done. Valid values are `EC2` or `ELB`
+
+wait_for_capacity_timeout = "10m" #A maximum duration that Terraform should wait for ASG instances to be healthy before timing out
+
+max_size = 4
+#The minimum/maximum size of the AutoScaling Group
+min_size = 3
+
+autoscaling_policies_enabled = true
+
+cpu_utilization_high_threshold_percent = 80
+
+cpu_utilization_low_threshold_percent = 20
+
+associate_public_ip_address = true
+
+kubernetes_version = 1.19
+
+kubeconfig_path = "~/.kube/config"
+
+bootstrap_extra_args = "--use-max-pods=40"
+
+ttl = 60

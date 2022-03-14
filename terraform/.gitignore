@@ -1,0 +1,37 @@
+# Common
+.terraform
+*.tfstate*
+*.tfvars*
+.terraformrc
+
+# Ignore vendor directory
+**/vendor
+
+# IDEs
+.idea
+.vscode
+
+# Logs
+*.logs
+*.log
+
+# Environment Variables for docker-compose
+.env
+
+# Environment variables for Makefile
+#/env/Makefile.override.example
+**/env/Makefile.override.dev
+**/env/Makefile.override.qa
+**/env/Makefile.override.uat
+**/env/Makefile.override.prod
+
+
+# Pem and Pub files
+**/*.pem
+**/*.pub
+
+# Ouput from terraform output
+*.json
+
+# Generated tags
+tags

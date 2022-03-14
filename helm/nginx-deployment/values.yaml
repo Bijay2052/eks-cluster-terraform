@@ -1,0 +1,29 @@
+Namespace: test-namespace
+
+Deploymentname: test-deployment
+
+replicaCount: 1
+
+Servicename: test-service
+
+Ingressname: test-ingress
+
+labels:
+  app.kubernetes.io/name: test-app
+ 
+matchLabels:
+  app.kubernetes.io/name: test-app
+  
+selector:
+  app.kubernetes.io/name: test-app
+
+containers:
+  name: test-app
+  image: <image url>:<tag>
+  port: 8080
+  imagePullPolicy: Always
+  
+annotations:
+  kubernetes.io/ingress.class: alb
+  alb.ingress.kubernetes.io/scheme: internet-facing
+  alb.ingress.kubernetes.io/target-type: instance
