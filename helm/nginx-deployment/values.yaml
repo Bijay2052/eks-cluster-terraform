@@ -21,7 +21,7 @@ containers:
   name: test-app
   image: <image url>:<tag>
   port: 8080
-  imagePullPolicy: Always
+  imagePullPolicy: IfNotPresent
   
 annotations:
   kubernetes.io/ingress.class: alb
